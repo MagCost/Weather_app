@@ -1,0 +1,110 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 15px;
+}
+.search {
+  margin-top: 15px;
+}
+
+.date {
+  padding-top: 60px;
+  text-align: left;
+}
+
+.date-time {
+  text-align: right;
+  font-size: small;
+  margin-top: 2px;
+  color: #6c757d;
+}
+.current-date {
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 70px;
+  text-align: left;
+  color: white;
+}
+
+.links_temp {
+  font-size: 30px;
+}
+
+.weather_icon {
+  font-size: 90px;
+}
+
+.today_is {
+  font-size: 20px;
+}
+
+.funny_sentence {
+  color: #38598b;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card {
+  margin-top: 20px;
+  background: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+  max-width: fit-content;
+  width: 100%;
+}
+
+.city {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 60px;
+  color: whitesmoke;
+}
+.status {
+  padding-top: 20px;
+  list-style-type: none;
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+.status_prec {
+  padding-left: 30px;
+}
+.status_hum {
+  padding-left: 53px;
+}
+.status_wind {
+  padding-left: 67px;
+}
+.day_forecast {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+h5 {
+  font-weight: 15px;
+  color: white;
+}
+.weather_forecast {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  background: white;
+  border-color: #2e83b4;
+}
+
+.weekday {
+  font-size: 14.5px;
+  margin-top: 10px;
+  color: #92a6c3;
+  font-weight: bold;
+}
+
+.forecast_icon {
+  font-size: 40px;
+  margin: 15px 0;
+  color: #2e83b4;
+}
