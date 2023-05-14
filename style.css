@@ -109,3 +109,11 @@ h5 {
   color: #2e83b4;
 }
 
+.source {
+  color: #2e83b4;
+  font-weight: bold;
+}
+
+.link_source {
+  text-decoration: none;
+}
