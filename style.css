@@ -110,10 +110,14 @@ h5 {
 }
 
 .source {
-  color: #2e83b4;
   font-weight: bold;
 }
 
 .link_source {
   text-decoration: none;
+  color: #2e83b4;
+}
+
+.source_name {
+  color: #2e83b4;
 }
