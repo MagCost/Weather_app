@@ -42,7 +42,10 @@ function displaySearchedCity(event) {
     let wind = response.data.wind.speed;
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = `${wind}km/h`;
-    //icon
+    //humidity
+    let humidity = response.data.main.humidity;
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = `${humidity}%`;
   }
   axios.get(`${apiURL}&appid=${apiKey}&q=${city}`).then(showTemperature);
 }
