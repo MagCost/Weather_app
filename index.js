@@ -51,9 +51,12 @@ function displaySearchedCity(event) {
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = `${description}`;
     //icon
-    let description = response.data.weather[0].description;
-    let descriptionElement = document.querySelector("#description");
-    descriptionElement.innerHTML = `${description}`;
+    let icon = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${icon}@2x.png`
+    );
   }
   axios.get(`${apiURL}&appid=${apiKey}&q=${city}`).then(showTemperature);
 }
