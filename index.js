@@ -41,11 +41,19 @@ function displaySearchedCity(event) {
     //wind
     let wind = response.data.wind.speed;
     let windElement = document.querySelector("#wind");
-    windElement.innerHTML = `${wind}km/h`;
+    windElement.innerHTML = `${wind}m/s`;
     //humidity
     let humidity = response.data.main.humidity;
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = `${humidity}%`;
+    //description
+    let description = response.data.weather[0].description;
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = `${description}`;
+    //icon
+    let description = response.data.weather[0].description;
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = `${description}`;
   }
   axios.get(`${apiURL}&appid=${apiKey}&q=${city}`).then(showTemperature);
 }
