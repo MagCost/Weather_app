@@ -27,8 +27,22 @@ body {
   color: white;
 }
 
-.links_temp {
+.links-temp {
   font-size: 30px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .weather_icon {
