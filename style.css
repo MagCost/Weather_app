@@ -53,12 +53,6 @@ body {
   font-size: 20px;
 }
 
-.funny_sentence {
-  color: #38598b;
-  font-size: 17px;
-  font-weight: bold;
-}
-
 .card {
   margin-top: 20px;
   background: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
@@ -85,7 +79,7 @@ body {
   padding-left: 53px;
 }
 .status_wind {
-  padding-left: 40px;
+  padding-left: 65px;
 }
 .day_forecast {
   display: block;
