@@ -29,7 +29,7 @@ function forecastCoordinates(coordinates) {
   let lat = coordinates.lat;
   let lon = coordinates.lon;
   let apiKey = "c819171fe0abdc14039af4ef5dda283b";
-  let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 }
 
 //form and city update when you search
@@ -73,6 +73,89 @@ function displaySearchedCity(event) {
   axios.get(`${apiURL}&appid=${apiKey}&q=${city}`).then(showTemperature);
 }
 
+//function to display forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+     <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+      <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+      <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+      <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+      <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML =
+    forecastHTML +
+    `
+      <div class="col-2">
+        <span class="weekday">Tue</span>
+        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="forecast_temperature">
+          <strong>0°</strong>
+          14°
+        </div>
+      </div>
+  `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 let form = document.querySelector("form");
 form.addEventListener("submit", displaySearchedCity);
 
@@ -98,8 +181,6 @@ function findLocation() {
 
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", findLocation);
-
-//function to update forecast
 
 //function farenheit to Celsius
 function showFarenheit(event) {
