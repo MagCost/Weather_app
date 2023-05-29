@@ -24,6 +24,14 @@ day.innerHTML = `${currentDay},`;
 let time = document.querySelector(".current-time");
 time.innerHTML = `${timeFormat}`;
 
+//forecast: get coordinates
+function forecastCoordinates(coordinates) {
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let apiKey = "c819171fe0abdc14039af4ef5dda283b";
+  let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+}
+
 //form and city update when you search
 function displaySearchedCity(event) {
   event.preventDefault();
@@ -60,6 +68,7 @@ function displaySearchedCity(event) {
       `https://openweathermap.org/img/wn/${icon}@2x.png`
     );
     celsiusTemperature = response.data.main.temp;
+    forecastCoordinates(response.data.coord);
   }
   axios.get(`${apiURL}&appid=${apiKey}&q=${city}`).then(showTemperature);
 }
@@ -89,6 +98,8 @@ function findLocation() {
 
 let currentButton = document.querySelector("#currentButton");
 currentButton.addEventListener("click", findLocation);
+
+//function to update forecast
 
 //function farenheit to Celsius
 function showFarenheit(event) {
