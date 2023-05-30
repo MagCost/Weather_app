@@ -78,78 +78,21 @@ function displaySearchedCity(event) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
+        <div class="weekday">${day}</div>
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png"></img>
         <div class="forecast_temperature">
           <strong>0°</strong>
           14°
         </div>
       </div>
   `;
-  forecastHTML =
-    forecastHTML +
-    `
-      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
-        <div class="forecast_temperature">
-          <strong>0°</strong>
-          14°
-        </div>
-      </div>
-  `;
-  forecastHTML =
-    forecastHTML +
-    `
-      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
-        <div class="forecast_temperature">
-          <strong>0°</strong>
-          14°
-        </div>
-      </div>
-  `;
-  forecastHTML =
-    forecastHTML +
-    `
-      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
-        <div class="forecast_temperature">
-          <strong>0°</strong>
-          14°
-        </div>
-      </div>
-  `;
-  forecastHTML =
-    forecastHTML +
-    `
-      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
-        <div class="forecast_temperature">
-          <strong>0°</strong>
-          14°
-        </div>
-      </div>
-  `;
-  forecastHTML =
-    forecastHTML +
-    `
-      <div class="col-2">
-        <span class="weekday">Tue</span>
-        <i class="fa-solid fa-cloud forecast_icon"></i>
-        <div class="forecast_temperature">
-          <strong>0°</strong>
-          14°
-        </div>
-      </div>
-  `;
+  });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
