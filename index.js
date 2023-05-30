@@ -72,8 +72,6 @@ function displaySearchedCity(event) {
 
   //forecast: get coordinates
   function forecastCoordinates(coordinates) {
-    let lat = coordinates.lat;
-    let lon = coordinates.lon;
     let apiKey = "c819171fe0abdc14039af4ef5dda283b";
     let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(displayForecast);
