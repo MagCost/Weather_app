@@ -52,7 +52,7 @@ function displaySearchedCity(event) {
         forecastHTML =
           forecastHTML +
           `
-        <div class="col-2">
+      <div class="col-2">
         <div class="weekday">${formatDay(forecastDay.dt)}</div>
         <img src="https://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
@@ -61,6 +61,7 @@ function displaySearchedCity(event) {
           <strong>${Math.round(forecastDay.temp.min)}°</strong>
           ${Math.round(forecastDay.temp.max)}°
         </div>
+      </div>
      
   `;
       }
@@ -73,7 +74,7 @@ function displaySearchedCity(event) {
   //forecast: get coordinates
   function forecastCoordinates(coordinates) {
     let apiKey = "c819171fe0abdc14039af4ef5dda283b";
-    let apiURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(displayForecast);
   }
 
